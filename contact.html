@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Contact AWS Trading Ltd for premium wall panels, acoustic finishes and interior design consultations.">
+  <title>Contact | AWS Trading Ltd</title>
+
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23111'/><text x='50' y='68' font-size='55' text-anchor='middle' fill='%23d4af6b' font-family='serif'>A</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a href="index.html" class="logo">AWS <span>Wall Panels</span></a>
+      <nav id="menu" aria-label="Main navigation"></nav>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">&#9776;</button>
+    </div>
+  </header>
+
+  <section class="page-title">
+    <div class="container">
+      <h1>Contact Our Sales Team</h1>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="container contact-grid">
+      <div class="contact-panel">
+        <h3>Tell us about your project</h3>
+        <form class="contact-form" id="contactForm">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <input type="tel" name="phone" placeholder="Phone Number">
+          <textarea name="message" placeholder="Which panels are you interested in?" required></textarea>
+          <button type="submit" class="btn">Send Enquiry</button>
+          <p id="formStatus" class="form-status" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <div class="contact-info-box">
+        <h3>Get in touch</h3>
+        <p>Our team is ready to help with premium panel recommendations, pricing enquiries and project support.</p>
+        <p><strong>Email:</strong> <a href="mailto:info@awstrading.com">info@awstrading.com</a></p>
+        <p><strong>Phone:</strong><a href="https://wa.me/447913174310"> +44 7913 174310</a></p>
+        <p><strong>Hours:</strong> Monday to Saturday, 9:00 AM - 7:00 PM</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-box">
+      <div>
+        <h3>AWS <span>Wall Panels</span></h3>
+        <p>Premium acoustic and PVC wall panels for luxury homes, offices and boutique hospitality interiors.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="panels.html">Wall Panels</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="mailto:info@awstrading.com">info@awstrading.com</a>
+        <!-- <p>+44 7913 174310</p> -->
+        <a href="https://wa.me/447913174310">
+          <p>+44 7913 174310</p>
+        </a>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2026 AWS Trading Ltd. All rights reserved.</p>
+  </footer>
+
+  <script src="js/menu.js"></script>
+  <script>
+    const contactForm = document.getElementById('contactForm');
+    const formStatus = document.getElementById('formStatus');
+
+    if (contactForm && formStatus) {
+      contactForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        formStatus.textContent = 'Thank you! Your enquiry has been received. Our team will contact you soon.';
+        contactForm.reset();
+      });
+    }
+  </script>
+</body>
+
+</html>
